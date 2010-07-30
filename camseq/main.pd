@@ -1,4 +1,4 @@
-#N canvas 94 42 449 204 10;
+#N canvas 312 46 449 204 10;
 #X obj 25 28 cnv 15 393 150 empty empty empty 20 12 0 14 -233471 -66577
 0;
 #N canvas 243 82 1015 600 (subpatch) 0;
@@ -35,7 +35,7 @@
 1 1;
 #X obj 583 255 i;
 #X obj 154 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
@@ -50,12 +50,12 @@
 1 1;
 #X obj 738 255 i;
 #X obj 229 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 771 255 i;
 #X obj 244 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 19 16 hradio 15 1 0 16 empty empty empty 0 -6 0 10 -262144 -1
--1 11;
+-1 13;
 #X obj 0 0 tgl 15 0 empty empty empty 0 -6 0 10 -45076 -262144 -262144
 0 1;
 #X obj 285 470 outlet;
@@ -69,7 +69,7 @@
 #X obj 21 -63 route 0;
 #X obj -46 -131 r scanrate;
 #X obj 84 -131 r onoff0;
-#X obj 363 470 send $sl6;
+#X obj 363 470 s sl6;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
@@ -169,22 +169,22 @@
 1 1;
 #X obj 422 256 i;
 #X obj 79 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 451 255 i;
 #X obj 94 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 481 255 i;
 #X obj 109 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 514 255 i;
 #X obj 124 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 547 256 i;
 #X obj 139 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-0 1;
+1 1;
 #X obj 583 255 i;
 #X obj 154 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
@@ -196,7 +196,7 @@
 1 1;
 #X obj 708 255 i;
 #X obj 214 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 738 255 i;
 #X obj 229 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 0 1;
@@ -215,7 +215,7 @@
 #X obj -44 -130 r scanrate;
 #X obj 84 -129 r onoff4;
 #X obj 22 -90 pack f f;
-#X obj 364 470 send $sl2;
+#X obj 364 470 s sl2;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
@@ -299,7 +299,7 @@
 #X obj 263 0 bng 15 250 50 0 empty empty empty 0 -6 0 10 -203904 -1
 -1;
 #X obj 19 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -262144
-0 1;
+1 1;
 #X floatatom 286 363 5 0 0 0 - - -;
 #X obj 284 428 sel 1;
 #X obj 326 255 i;
@@ -313,16 +313,16 @@
 1 1;
 #X obj 422 256 i;
 #X obj 79 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 451 255 i;
 #X obj 94 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 481 255 i;
 #X obj 109 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 514 255 i;
 #X obj 124 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 547 256 i;
 #X obj 139 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 0 1;
@@ -331,7 +331,7 @@
 0 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 646 255 i;
 #X obj 184 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
@@ -340,7 +340,7 @@
 1 1;
 #X obj 708 255 i;
 #X obj 214 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 738 255 i;
 #X obj 229 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 0 1;
@@ -359,7 +359,7 @@
 #X obj -46 -131 r scanrate;
 #X obj 84 -129 r onoff3;
 #X obj 22 -90 pack f f;
-#X obj 364 470 send $sl3;
+#X obj 364 470 s sl3;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
@@ -457,40 +457,40 @@
 1 1;
 #X obj 422 256 i;
 #X obj 79 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 451 255 i;
 #X obj 94 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 481 255 i;
 #X obj 109 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 514 255 i;
 #X obj 124 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 547 256 i;
 #X obj 139 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-0 1;
+1 1;
 #X obj 583 255 i;
 #X obj 154 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 646 255 i;
 #X obj 184 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
 #X obj 679 256 i;
 #X obj 199 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 708 255 i;
 #X obj 214 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 738 255 i;
 #X obj 229 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 771 255 i;
 #X obj 244 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 0 0 tgl 15 0 empty empty empty 0 -6 0 10 -45076 -262144 -262144
 0 1;
 #X obj 285 470 outlet;
@@ -503,7 +503,7 @@
 #X obj -47 -131 r scanrate;
 #X obj 85 -131 r onoff2;
 #X obj 22 -90 pack f f;
-#X obj 356 469 send $sl4;
+#X obj 356 469 s sl4;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
@@ -604,7 +604,7 @@
 1 1;
 #X obj 451 255 i;
 #X obj 94 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 481 255 i;
 #X obj 109 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 1 1;
@@ -619,7 +619,7 @@
 1 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 646 255 i;
 #X obj 184 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
@@ -628,10 +628,10 @@
 1 1;
 #X obj 708 255 i;
 #X obj 214 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 738 255 i;
 #X obj 229 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-1 1;
+0 1;
 #X obj 771 255 i;
 #X obj 244 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 0 1;
@@ -647,7 +647,7 @@
 #X obj -48 -131 r scanrate;
 #X obj 87 -131 r onoff1;
 #X obj 22 -90 pack f f;
-#X obj 364 470 send $sl5;
+#X obj 364 470 s sl5;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
@@ -726,7 +726,7 @@
 #X connect 45 0 38 0;
 #X coords 0 1 100 -1 278 15 1 0 0;
 #X restore 35 124 graph;
-#N canvas 207 70 1027 659 (subpatch) 0;
+#N canvas 0 31 1027 659 (subpatch) 0;
 #X obj 286 255 i;
 #X obj 263 0 bng 15 250 50 0 empty empty empty 0 -6 0 10 -203904 -1
 -1;
@@ -742,34 +742,34 @@
 1 1;
 #X obj 389 255 i;
 #X obj 64 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-0 1;
+1 1;
 #X obj 422 256 i;
 #X obj 79 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 1 1;
 #X obj 451 255 i;
 #X obj 94 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 481 255 i;
 #X obj 109 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 514 255 i;
 #X obj 124 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 547 256 i;
 #X obj 139 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 0 1;
 #X obj 583 255 i;
 #X obj 154 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 613 255 i;
 #X obj 169 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
-1 1;
+0 1;
 #X obj 646 255 i;
 #X obj 184 0 tgl 15 0 empty empty empty 0 -6 0 10 -33289 -262144 -1
 1 1;
 #X obj 679 256 i;
 #X obj 199 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
-0 1;
+1 1;
 #X obj 708 255 i;
 #X obj 214 0 tgl 15 0 empty empty empty 0 -6 0 10 -13330 -262144 -1
 1 1;
@@ -791,7 +791,7 @@
 #X obj -45 -131 r scanrate;
 #X obj 83 -131 r onoff5;
 #X obj 22 -90 pack f f;
-#X obj 355 470 send $sl1;
+#X obj 355 470 s sl1;
 #X connect 0 0 3 0;
 #X connect 2 0 0 1;
 #X connect 3 0 4 0;
