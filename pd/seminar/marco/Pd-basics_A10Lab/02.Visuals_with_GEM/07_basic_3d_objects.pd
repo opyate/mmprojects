@@ -1,0 +1,57 @@
+#N canvas 508 437 589 291 10;
+#X declare -lib Gem;
+#X obj 8 10 cnv 15 400 40 empty empty Basic_3D_objects 20 17 0 24 -228856
+-66577 0;
+#X obj 30 104 gemhead;
+#X obj 30 76 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1;
+#X obj 30 132 cube;
+#X obj 90 104 gemhead;
+#X obj 90 76 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1;
+#X obj 90 132 sphere;
+#X obj 150 104 gemhead;
+#X obj 150 76 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 150 132 cone;
+#X obj 212 105 gemhead;
+#X obj 212 77 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 33 201 gemhead;
+#X obj 33 173 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 33 229 teapot;
+#X obj 93 201 gemhead;
+#X obj 93 173 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 93 229 torus;
+#X obj 431 12 gemwin_control;
+#X obj 432 55 import Gem;
+#X obj 153 201 gemhead;
+#X obj 153 173 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 153 229 cuboid;
+#X obj 280 196 gemhead;
+#X obj 424 221 gemwin;
+#X msg 424 195 lighting \$1;
+#X obj 424 170 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 281 224 world_light;
+#X obj 212 133 tube 0.5 0.9 2.5 30;
+#X msg 352 196 1 1 1;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 10 0 28 0;
+#X connect 11 0 10 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 0;
+#X connect 20 0 22 0;
+#X connect 21 0 20 0;
+#X connect 23 0 27 0;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 29 0 27 1;

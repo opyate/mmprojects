@@ -1,0 +1,54 @@
+#N canvas 0 0 432 498 10;
+#X obj 10 20 cnv 15 400 40 empty empty Turning_on_and_off 20 17 0 24
+-228856 -66577 0;
+#X obj 80 130 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X text 103 130 <-- click here;
+#X obj 80 179 bng 20 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 24 451 The object is called [tgl] or you can get it from the
+"Put" menu.;
+#X obj 34 302 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X floatatom 34 336 5 0 0 0 - - -;
+#X obj 98 302 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 100
+;
+#X floatatom 98 336 5 0 0 0 - - -;
+#X obj 163 302 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 9e-022
+;
+#X floatatom 163 336 5 0 0 0 - - -;
+#X obj 226 302 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 -0.034
+;
+#X floatatom 226 336 5 0 0 0 - - -;
+#X obj 36 368 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 23
+;
+#X floatatom 36 402 5 0 0 0 - - -;
+#X obj 100 368 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 99999
+;
+#X floatatom 100 402 5 0 0 0 - - -;
+#X obj 164 368 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X floatatom 164 402 5 0 0 0 - - -;
+#X obj 227 368 tgl 20 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 100
+;
+#X floatatom 227 402 5 0 0 0 - - -;
+#X obj 80 153 metro 1000;
+#X obj 9 70 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 25 76 Many objects can be switched on and off using a toggle.
+A toggle outputs 0 for off \, and an number for on.;
+#X obj 8 225 cnv 15 400 60 empty empty empty 20 17 0 24 -261234 -66577
+0;
+#X text 23 237 By default \, a toggle outputs 1 for on \, but you can
+change that to any number by selecting the "Properties" dialog.;
+#X text 106 179 bangs once every second (1000ms = 1sec);
+#X connect 1 0 21 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 0;
+#X connect 21 0 3 0;

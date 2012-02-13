@@ -1,0 +1,76 @@
+#N canvas 383 103 494 776 10;
+#X obj 160 98 float;
+#X text 26 63 Many objects can accept "arguments" to define their behavior.
+Here is a plain [float] object:;
+#X text 25 135 Here is a [float] object with an argument of "5.5":
+;
+#X obj 153 157 float 5.5;
+#X obj 174 273 float 5.5;
+#X obj 174 255 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 174 294 5 0 0 0 - - -;
+#X text 22 204 Here \, the argument of "5.5" makes this [float] store
+the value 5.5 by default. Clicking the bang makes [float] output the
+value that it is currently storing:;
+#X floatatom 185 682 5 0 0 0 - - -;
+#X symbolatom 233 681 10 0 0 0 - - -;
+#X obj 137 718 bng 15 250 50 0 empty empty bang -6 23 1 12 -262144
+-1 -1;
+#X obj 137 655 route bang float symbol list;
+#X obj 185 718 bng 15 250 50 0 empty empty float -4 23 1 12 -262144
+-1 -1;
+#X obj 233 718 bng 15 250 50 0 empty empty symbol -12 23 1 12 -262144
+-1 -1;
+#X obj 281 718 bng 15 250 50 0 empty empty list -2 23 1 12 -262144
+-1 -1;
+#X msg 73 612 bang;
+#X msg 114 612 5;
+#X msg 150 612 symbol word;
+#X msg 241 612 list one two three;
+#X text 30 548 Some objects can accept many arguments at the same time.
+For example \, you need to tell [route] what kind of data you want
+\, and it will sort it based on the data type:;
+#X obj 297 449 select 5;
+#X floatatom 342 495 5 0 0 1 everything_else - -;
+#X obj 296 470 bng 15 250 50 0 empty empty matched -52 9 0 10 -262144
+-1 -1;
+#X msg 297 420 5;
+#X msg 266 420 3;
+#X msg 329 420 7;
+#X obj 15 21 cnv 15 400 40 empty empty Creations_Arguments 20 17 0
+24 -228856 -66577 0;
+#X obj 15 341 cnv 15 400 60 empty empty empty 20 17 0 24 -261234 -66577
+0;
+#X text 27 348 Some objects need to have some arguments in order to
+do anything useful. For example \, you can tell [select] which number
+to look for with an argument:;
+#X obj 68 441 select;
+#X msg 74 418 5;
+#X msg 43 418 3;
+#X msg 106 418 7;
+#X floatatom 101 496 5 0 0 1 everything_else - -;
+#X obj 69 462 bng 15 250 50 0 empty empty matched -52 9 0 10 -262144
+-1 -1;
+#X text 130 441 <-- USELESS;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 11 0 10 0;
+#X connect 11 1 8 0;
+#X connect 11 2 9 0;
+#X connect 11 3 14 0;
+#X connect 15 0 11 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 0;
+#X connect 18 0 11 0;
+#X connect 20 0 22 0;
+#X connect 20 1 21 0;
+#X connect 23 0 20 0;
+#X connect 24 0 20 0;
+#X connect 25 0 20 0;
+#X connect 29 0 34 0;
+#X connect 29 1 33 0;
+#X connect 30 0 29 0;
+#X connect 31 0 29 0;
+#X connect 32 0 29 0;

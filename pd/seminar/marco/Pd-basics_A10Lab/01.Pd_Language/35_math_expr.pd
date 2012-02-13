@@ -1,0 +1,73 @@
+#N canvas 385 127 497 751 10;
+#X obj 252 434 cnv 15 80 25 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X obj 103 439 cnv 15 80 25 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X obj 20 20 cnv 15 400 40 empty empty Math_expr 20 17 0 24 -228856
+-66577 0;
+#X floatatom 269 438 5 0 0 0 y - -;
+#X floatatom 124 441 5 0 0 0 x - -;
+#X obj 269 482 trigger bang float;
+#X obj 20 70 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 34 75 The [expr] object allows you to write out formulas in
+the standard style of many programming languages.;
+#X obj 146 396 cnv 15 110 25 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X text 155 399 sqrt(x^2 + y^2);
+#X obj 60 525 cnv 15 100 200 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X obj 93 594 +;
+#X obj 93 636 sqrt;
+#X floatatom 93 693 7 0 0 0 - - -;
+#X obj 66 550 pow 2;
+#X obj 119 551 pow 2;
+#X obj 220 561 cnv 15 250 100 empty empty empty 20 17 0 24 -228856
+-66577 0;
+#X obj 231 578 expr sqrt(pow($f1 \, 2) + pow($f2 \, 2));
+#X floatatom 231 632 7 0 0 0 - - -;
+#X obj 136 136 cnv 15 110 25 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X text 141 139 a ((x+2) - (y+3));
+#X text 290 131 x = 4;
+#X text 291 143 y = 6;
+#X msg 25 179 4;
+#X obj 53 216 +;
+#X msg 74 175 2;
+#X floatatom 58 251 5 0 0 0 - - -;
+#X obj 166 220 +;
+#X floatatom 168 249 5 0 0 0 - - -;
+#X msg 144 186 6;
+#X msg 185 186 3;
+#X obj 112 286 -;
+#X floatatom 112 315 5 0 0 0 - - -;
+#X msg 111 247 bang;
+#X obj 292 228 expr ((4+2) - (6+3));
+#X msg 292 197 bang;
+#X floatatom 292 269 5 0 0 0 - - -;
+#X obj 30 359 cnv 15 400 16 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X connect 3 0 5 0;
+#X connect 4 0 14 0;
+#X connect 4 0 17 0;
+#X connect 5 0 14 0;
+#X connect 5 0 17 0;
+#X connect 5 1 15 0;
+#X connect 5 1 17 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 1;
+#X connect 17 0 18 0;
+#X connect 23 0 24 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 1;
+#X connect 26 0 31 0;
+#X connect 27 0 28 0;
+#X connect 28 0 31 1;
+#X connect 29 0 27 0;
+#X connect 30 0 27 1;
+#X connect 31 0 32 0;
+#X connect 33 0 31 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;

@@ -1,0 +1,36 @@
+#N canvas 726 54 479 518 10;
+#X obj 151 237 pix_video;
+#X obj 201 345 pix_texture;
+#X obj 196 401 rectangle 4 3;
+#X obj 150 201 gemhead 1;
+#X msg 48 54 create;
+#X msg 32 16 destroy;
+#X obj 17 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 51 146 gemwin;
+#X msg 72 116 dimen 320 240;
+#X msg 318 196 open \$1;
+#X obj 314 145 openpanel;
+#X obj 318 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 286 237 pix_image;
+#X obj 238 186 gemhead 2;
+#X obj 200 290 pix_mix 0;
+#X obj 329 280 hsl 128 15 0.01 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7100 1;
+#X msg 12 197 colorspace RGBA;
+#X connect 0 0 14 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 8 0 7 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 14 1;
+#X connect 13 0 12 0;
+#X connect 14 0 1 0;
+#X connect 15 0 14 2;
+#X connect 16 0 0 0;

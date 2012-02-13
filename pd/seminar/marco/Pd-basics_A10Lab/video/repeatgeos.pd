@@ -1,0 +1,68 @@
+#N canvas 646 0 852 904 10;
+#X obj 0 -76 cnv 15 850 900 empty empty HUGE_REPETITIONS 20 17 0 22
+-203904 -33289 0;
+#X obj 433 389 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 433 588 cnv 15 400 100 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 433 -53 cnv 15 400 120 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 444 -50 Let's create the gem window = pd video output;
+#X text 459 -31 1- make a message box \, type: dimen 640 480;
+#X text 459 -13 2- make a message box \, type: create \, 1;
+#X text 459 4 3- make a message box \, type: 0 \, destroy;
+#X text 459 20 4- make an object box \, type: gemwin;
+#X obj 433 77 cnv 15 400 290 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 449 398 Now we create a 3d object;
+#X text 459 37 5- connect all message boxes to [gemwin];
+#X text 17 692 finally... click [dimen(;
+#X text 83 707 click [create(;
+#X text 82 790 and scrub the videoechoes;
+#X text 240 792 (shift+click and drag);
+#X text 82 723 click the [draw line( message;
+#X text 458 102 1- make an object \, type: gemhead;
+#X text 458 119 2- make an object \, type: rotateXYZ;
+#X text 447 81 Create a light and rotate it around the scene;
+#X text 458 136 3- make an object \, type: world_light;
+#X text 458 151 4- connect [gemhead] to [rotateXYZ] \, and [rotateXYZ]
+to [world_light];
+#X text 458 178 5- make a number box and connect it to the third inlet
+of [rotateXYZ];
+#X text 458 206 6- make a message box \, type: 0.4 0.6 0.7 and connect
+it to the cold inlet of [world_light];
+#X text 445 257 Send the proper light message to [gemwin];
+#X text 460 273 1- make a toggle;
+#X text 459 287 2- make a message box \, type: lighting \$1;
+#X text 459 301 3- make an object box \, type: gemwin;
+#X text 462 319 4- connect the toggle to the message box \, and the
+message box to the [gemwin];
+#X text 463 414 1- make an object box \, type: gemhead;
+#X text 463 431 2- make an object box \, type: repeat;
+#X text 464 524 5- make a message box \, type: draw line;
+#X text 481 446 make a number box and connect it to its cold inlet
+;
+#X text 462 464 3- make a object box \, type: translateXYZ -2 0 0;
+#X text 463 496 4- make a object box \, type: rotateXYZ 0 0 0;
+#X text 480 477 make 3 numb. box and connect it to its cold inlets
+;
+#X text 482 508 make 3 numb. box and connect it to its cold inlets
+;
+#X text 464 542 6- make a message box \, type: draw fill;
+#X text 465 560 7- make an object box \, type: cube 0.5;
+#X text 466 576 8- connect everything;
+#X text 478 592 - connect [gemhead] to [repeat];
+#X text 479 606 - connect [repeat] to [translateXYZ];
+#X text 478 621 - connect [translateXYZ] to [rotateXYZ];
+#X text 478 636 - connect [rotateXYZ] to hot inlet of [cube];
+#X text 478 653 -connect the two 'draw' messages to the hot inlet of
+cube;
+#X obj 433 708 cnv 15 400 70 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 446 713 add some spicy blur;
+#X text 472 734 1- make an object box \, type: videoechoes;
+#X text 471 746 2- make a number box and connect it to its rightmost
+inlet;
+#X text 83 739 turn on the light;
+#X text 82 773 play with rotation and translation;
+#X text 83 755 scrub the [repeat] number box;

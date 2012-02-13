@@ -1,0 +1,19 @@
+#N canvas 0 0 438 408 10;
+#X obj 8 20 cnv 15 400 40 empty empty gemwin_control 20 17 0 24 -228856
+-66577 0;
+#X obj 119 255 gemwin_control;
+#X obj 7 152 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 21 78 From now on in this tutorial \, the [gemwin_control]
+object will be used to control the gemwin. It is just a handy shortcut
+with a GUI for controlling the window creation/destruction and the
+rendering.;
+#X text 25 152 - The "window" checkbox sends [create( and [destroy(
+to [gemwin];
+#X text 26 183 - the "render" checkbox sends 1 or 0 to [gemwin] to
+control the rendering.;
+#X obj 7 322 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 25 331 Each checkbox will turn green when enabled. When the
+whole object turns green \, that means everything is ready to display
+data in the gemwin.;

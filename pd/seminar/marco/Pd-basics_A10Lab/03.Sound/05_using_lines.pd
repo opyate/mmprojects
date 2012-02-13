@@ -1,0 +1,75 @@
+#N canvas 360 123 862 772 10;
+#X obj -91 129 osc~ 440;
+#X obj -91 381 dac~;
+#X obj -91 294 *~;
+#X obj -72 232 line~;
+#X text -42 382 <-- out;
+#X text -36 9 LINES GRAPHED;
+#X obj -9 141 r graphit;
+#X obj -7 231 r graphit;
+#X obj -7 298 r graphit;
+#X obj -72 201 r to-line;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array product 44100 float 0;
+#X coords 0 1.02 44100 -1.02 200 130 1;
+#X restore 420 357 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array osc-output 44100 float 0;
+#X coords 0 1.02 44100 -1.02 200 130 1;
+#X restore 420 27 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array line-output 44100 float 0;
+#X coords 0 1.02 44100 -1.02 200 130 1;
+#X restore 420 192 graph;
+#X obj -9 171 tabwrite~ osc-output;
+#X obj -91 351 *~ 0.1;
+#X msg -126 442 \; pd dsp 1 \; to-line 0 \, 1 500 \; graphit bang;
+#X msg 57 441 \; pd dsp 1 \; to-line 1 \, 0 500 \; graphit bang;
+#X obj -7 261 tabwrite~ line-output;
+#X obj -7 328 tabwrite~ product;
+#X text -94 420 ramp up;
+#X text 82 418 ramp down;
+#X text 268 417 to 1/2;
+#X msg 237 441 \; pd dsp 1 \; to-line 0.5 1000 \; graphit bang;
+#X text 423 498 ------ 1 second ------;
+#X text 502 727 updated for Pd version 0.33;
+#X obj -149 8 cnv 15 400 40 empty empty Using_lines 20 17 0 24 -228856
+-66577 0;
+#X obj -149 58 cnv 15 400 40 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text -130 63 Here is a line~ controlling the amplitude of an osc~
+\, but with the outputs graphed:;
+#X text 142 170 <-- write to 'osc-output' array;
+#X text 146 261 <-- write to 'line-output' array;
+#X text 120 327 <-- write to 'product' array;
+#X obj -149 528 cnv 15 400 90 empty empty empty 20 17 0 24 -228856
+-66577 0;
+#X text -130 530 Click the message boxes above to try it. Note that
+in the first two boxes \, the line~ objects get two messages. The first
+one \, with no time value \, causes the line~ to jump immediately to
+the value. The third box takes line~'s previous value as a point of
+departure. What you see will depend on which box you last clicked and
+how long you waited between the two.;
+#X obj -152 648 cnv 15 400 110 empty empty empty 20 17 0 24 -261234
+-66577 0;
+#X text -131 652 On most machines \, you will hear an interruption
+in the sound one second after you click on the first or third box.
+This is because the graphical updates are likely to eat more CPU time
+than your audio buffer has pre-buffered for. You can avoid this if
+you keep your graphs in sub-windows and open them only when you need
+them. In some future version of Pd this behavior will be improved.
+Until then \, you'll have to avoid having arrays getting re-drawn during
+music performances.;
+#X text -94 106 sine wave generator;
+#X obj 270 23 pddp/dsp;
+#X connect 0 0 2 0;
+#X connect 0 0 13 0;
+#X connect 2 0 14 0;
+#X connect 2 0 18 0;
+#X connect 3 0 2 1;
+#X connect 3 0 17 0;
+#X connect 6 0 13 0;
+#X connect 7 0 17 0;
+#X connect 8 0 18 0;
+#X connect 9 0 3 0;
+#X connect 14 0 1 0;

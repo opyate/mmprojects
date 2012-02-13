@@ -1,0 +1,64 @@
+#N canvas 0 0 607 525 10;
+#X declare -lib Gem;
+#X obj 28 30 cnv 15 400 40 empty empty Lighting 20 17 0 24 -228856
+-66577 0;
+#X obj 445 33 gemwin_control;
+#X obj 446 77 import Gem;
+#X obj 317 214 gemwin;
+#X msg 317 193 lighting \$1;
+#X obj 317 175 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 152 175 gemhead;
+#X obj 152 216 sphere 1 35;
+#X obj 45 290 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 45 310 world_light;
+#X text 55 154 example sphere;
+#X obj 25 251 gemhead;
+#X obj 45 361 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 45 411 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 45 481 spot_light;
+#X obj 45 381 light;
+#X msg 77 460 0 0 1;
+#X msg 75 358 0 1 0;
+#X msg 85 288 1 0 0;
+#X text 145 285 A [world_light] is a light that is infinitely far away
+\, basically like sunlight. The rays coming from a [world_light] are
+always parallel.;
+#X text 144 366 [light] generates a point-light that is part of the
+scene. It is basically like a lamp. You can place the lamp directly
+in your scene.;
+#X msg 53 441 debug \$1;
+#X obj 69 422 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X text 144 446 A [spot_light] generates a spot light which you can
+move around. It can be used for pinpoint light or widened to cover
+a larger area. If you turn on the debug feature \, you will see a little
+cone where the light source is.;
+#X obj 152 196 translateXYZ 0 0 -2;
+#X obj 27 79 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 48 78 No world would be complete without lighting. Gem provides
+three different kinds of light sources. Like rendering \, the calculation
+of lighting needs to be turned on by sending a message to [gemwin]
+\, since lighting is a GPU-intensive operation.;
+#X obj 153 156 tgl 15 1 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 24 0;
+#X connect 8 0 9 0;
+#X connect 11 0 9 0;
+#X connect 11 0 15 0;
+#X connect 11 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 0;
+#X connect 16 0 14 1;
+#X connect 17 0 15 1;
+#X connect 18 0 9 1;
+#X connect 21 0 14 0;
+#X connect 22 0 21 0;
+#X connect 24 0 7 0;
+#X connect 27 0 6 0;

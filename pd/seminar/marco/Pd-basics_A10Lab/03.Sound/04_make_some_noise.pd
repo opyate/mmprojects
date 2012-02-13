@@ -1,0 +1,17 @@
+#N canvas 337 225 521 360 10;
+#X obj 9 10 cnv 15 400 40 empty empty Make_some_noise! 20 17 0 24 -228856
+-66577 0;
+#X obj 429 14 pddp/dsp;
+#X obj 181 202 noise~;
+#X obj 164 312 dac~;
+#X obj 181 254 *~ 0.05;
+#X text 27 135 To hear the noise \, click on the box in the upper right
+corner \, to the left of where it says "dsp".;
+#X obj 9 60 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 25 65 To keep things interesting \, let's make some noise.
+We can start with the [noise~] object and connect it to [dac~] to output
+sound. We multiply the audio by 0.05 to make it quiet.;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;

@@ -1,0 +1,64 @@
+#N canvas 0 0 431 741 10;
+#X declare -lib iemlib;
+#X obj 277 25 import iemlib;
+#X obj 107 90 symbol;
+#X obj 48 90 bang;
+#X obj 120 122 f;
+#X obj 47 122 float;
+#X text 88 123 aka;
+#X obj 79 449 float;
+#X msg 106 417 123;
+#X obj 125 662 float;
+#X msg 171 636 123;
+#X msg 125 637 432;
+#X msg 146 416 321;
+#X floatatom 79 473 5 0 0 0 - - -;
+#X floatatom 51 286 5 0 0 0 - - -;
+#X floatatom 125 691 5 0 0 0 - - -;
+#X obj 12 13 cnv 15 400 40 empty empty Storage_objects 20 17 0 24 -228856
+-66577 0;
+#X obj 51 257 float 5.5;
+#X text 32 65 A storage object stores data.;
+#X obj 173 90 list;
+#X obj 165 256 symbol yoyo;
+#X symbolatom 165 285 10 0 0 0 - - -;
+#X msg 51 229 bang;
+#X msg 165 228 bang;
+#X msg 41 418 bang;
+#X obj 223 468 symbol yoyo;
+#X symbolatom 223 497 10 0 0 0 - - -;
+#X msg 223 440 bang;
+#X msg 76 624 bang;
+#X msg 286 393 symbol one;
+#X msg 310 424 symbol two;
+#X obj 227 90 any;
+#X obj 277 90 pointer;
+#X obj 12 535 cnv 15 400 60 empty empty empty 20 17 0 24 -261234 -66577
+0;
+#X text 34 545 If a storage object receives a value on the left inlet
+\, then it outputs that value immediately in addition to storing it.
+;
+#X obj 12 163 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 34 171 If you bang the left inlet of a storage object \, it
+outputs its stored value.;
+#X obj 12 323 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 33 335 If a storage object receives a value on the right inlet
+\, then it stores that value.;
+#X connect 6 0 12 0;
+#X connect 7 0 6 1;
+#X connect 8 0 14 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;
+#X connect 11 0 6 1;
+#X connect 16 0 13 0;
+#X connect 19 0 20 0;
+#X connect 21 0 16 0;
+#X connect 22 0 19 0;
+#X connect 23 0 6 0;
+#X connect 24 0 25 0;
+#X connect 26 0 24 0;
+#X connect 27 0 8 0;
+#X connect 28 0 24 1;
+#X connect 29 0 24 1;

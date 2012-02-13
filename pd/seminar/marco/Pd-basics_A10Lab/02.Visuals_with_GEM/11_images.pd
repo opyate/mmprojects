@@ -1,0 +1,32 @@
+#N canvas 630 231 622 376 10;
+#X declare -lib Gem;
+#X obj 8 10 cnv 15 400 40 empty empty Images 20 17 0 24 -228856 -66577
+0;
+#X obj 465 16 gemwin_control;
+#X obj 466 60 import Gem;
+#X obj 128 146 gemhead;
+#X obj 128 328 pix_draw;
+#X obj 128 291 pix_image;
+#X obj 144 178 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#N canvas 10 40 620 460 openpanel 0;
+#X obj 114 62 inlet;
+#X obj 121 254 outlet;
+#X obj 114 125 openpanel;
+#X msg 114 162 set open \$1;
+#X obj 114 199 t b a;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 1 0;
+#X restore 144 199 pd openpanel;
+#X text 14 67 You can load up and display images in the Gem space.
+[pix_image] loads up the image \, and [pix_draw] draws it to the screen.
+;
+#X msg 144 227 open \$1;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 5 0;

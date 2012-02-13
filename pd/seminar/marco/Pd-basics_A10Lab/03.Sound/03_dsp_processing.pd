@@ -1,0 +1,49 @@
+#N canvas 373 128 598 556 10;
+#X declare -lib pddp -lib rradical;
+#X obj 448 51 import pddp rradical;
+#X obj 449 20 pddp/dsp;
+#X obj 21 18 cnv 15 400 40 empty empty DSP_processing 20 17 0 24 -228856
+-66577 0;
+#X text 22 214 The dsp message:;
+#X msg 26 268 \; pd dsp 0;
+#X msg 103 268 \; pd dsp 1;
+#X text 32 248 off (0);
+#X text 107 247 on (1);
+#X msg 190 268 \; pd dsp \$1;
+#X obj 190 244 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 215 243 use a toggle;
+#X text 312 232 receive the message;
+#X obj 314 250 receive pd;
+#X obj 314 271 route dsp;
+#X obj 314 292 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 31 440 Objects:;
+#X text 49 476 [pddp/dsp];
+#X obj 126 476 pddp/dsp;
+#X obj 324 472 ezdac~;
+#X text 201 472 [rradical/ezdac~];
+#X obj 21 68 cnv 15 400 40 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 37 68 Unlike message processing \, which is always running
+\, audio processing can be switched on and off. This is also known
+as "DSP" or Digital Signal Processing.;
+#X obj 21 118 cnv 15 400 80 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 32 125 There are many ways to control the DSP: There is a checkbox
+in the Pd window \; you can send Pd a dsp message \; there are key
+commands \; and there are high-level objects \, like [pddp/dsp].;
+#X obj 21 338 cnv 15 400 80 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 96 343 Key commands:;
+#X text 43 384 GNU/Linux and Windows:;
+#X text 122 369 Mac OS X:;
+#X text 207 342 (off);
+#X text 308 343 (on);
+#X text 210 384 Ctrl-.;
+#X text 210 370 Cmd-.;
+#X text 310 384 Ctrl-/;
+#X text 310 370 Cmd-/;
+#X connect 9 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;

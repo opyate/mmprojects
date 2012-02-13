@@ -1,0 +1,40 @@
+#N canvas 0 0 445 524 10;
+#X obj 20 20 cnv 15 400 40 empty empty Building_lists 20 12 0 24 -228856
+-66577 0;
+#X obj 50 405 pack float float float;
+#X msg 50 436 \$3 \$1 \$2;
+#X floatatom 50 379 5 0 0 0 - - -;
+#X floatatom 157 380 5 0 0 0 - - -;
+#X floatatom 265 381 5 0 0 0 - - -;
+#X text 37 282 You can use arguments to reorder elements:;
+#X obj 50 87 bng 20 250 50 0 empty empty empty 0 -6 0 8 -24198 -1 -1
+;
+#X floatatom 265 136 5 0 0 0 - - -;
+#X floatatom 157 136 5 0 0 0 - - -;
+#X floatatom 50 136 5 0 0 0 - - -;
+#X obj 50 110 trigger bang bang bang;
+#X obj 50 160 pack float float float;
+#X obj 50 203 print;
+#X obj 50 466 print;
+#X text 90 200 <-- now check the Pd console;
+#X text 116 214 what you see is a 'list';
+#X obj 50 317 bng 20 250 50 0 empty empty empty 0 -6 0 8 -24198 -1
+-1;
+#X obj 50 340 trigger bang bang bang;
+#X connect 1 0 2 0;
+#X connect 2 0 14 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;
+#X connect 7 0 11 0;
+#X connect 8 0 12 2;
+#X connect 9 0 12 1;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 11 1 9 0;
+#X connect 11 2 8 0;
+#X connect 12 0 13 0;
+#X connect 17 0 18 0;
+#X connect 18 0 3 0;
+#X connect 18 1 4 0;
+#X connect 18 2 5 0;

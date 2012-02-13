@@ -1,0 +1,15 @@
+#N canvas 705 196 429 288 10;
+#X obj 145 245 gemwin;
+#X obj 8 10 cnv 15 400 40 empty empty gemwin 20 17 0 24 -228856 -66577
+0;
+#X msg 112 136 create;
+#X msg 194 168 destroy;
+#X obj 8 61 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 164 135 <- apri;
+#X text 252 169 <- chiudi;
+#X text 21 66 The most basic element in Gem is the gemwin \, which
+displays the world that you are creating. Here's how you open and close
+the gemwin:;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;

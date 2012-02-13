@@ -1,0 +1,68 @@
+#N canvas 463 256 446 577 10;
+#X obj 20 20 cnv 15 400 40 empty empty Grabbing_keystrokes 20 17 0
+24 -228856 -66577 0;
+#X obj 46 173 key;
+#X floatatom 46 197 5 0 0 0 - - -;
+#X floatatom 124 198 5 0 0 0 - - -;
+#X obj 124 174 keyup;
+#X floatatom 205 199 5 0 0 0 - - -;
+#X obj 205 175 keyname;
+#X symbolatom 269 200 10 0 0 0 - - -;
+#X text 32 283 't' key as toggle:;
+#X obj 41 348 select 116;
+#X obj 41 317 keyup;
+#N canvas 238 530 478 328 (subpatch) 0;
+#X obj 101 10 inlet;
+#X obj 100 100 tgl 32 0 empty \$0-tgl empty 0 -6 0 8 -166441 -166441
+-262144 0 1;
+#X obj 156 68 select 1;
+#X msg 172 186 color \$1 \$2 \$3;
+#X msg 268 146 1 1 0;
+#X msg 133 144 -65281 0 -1;
+#X obj 268 85 bang;
+#X obj 176 241 send \$0-tgl;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 1 6 0;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 32 32 1 100 100;
+#X restore 41 372 pd;
+#X obj 220 320 key;
+#X floatatom 220 344 5 0 0 0 - - -;
+#X obj 319 322 keyup;
+#X obj 220 373 select 97;
+#X obj 319 373 select 97;
+#X obj 220 409 timer;
+#X floatatom 220 435 5 0 0 0 - - -;
+#X obj 20 70 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 31 70 Pd provides a set of objects for getting events from
+the keyboard. [key] outputs on key down \, [keyup] outputs on key up
+\, and [keyname] outputs both key up and key down \, and gives a symbolic
+name for the current key.;
+#X obj 20 485 cnv 15 400 60 empty empty empty 20 17 0 24 -261234 -66577
+0;
+#X text 43 142 try to type something on your keyboard:;
+#X text 207 258 This example measures the time;
+#X text 210 274 between each;
+#X text 289 275 press of the 'a' key;
+#X text 211 290 in milliseconds.;
+#X text 36 493 These objects will only grab keys when this window is
+selected. If you click on the Pd window \, this window won't get key
+events anymore.;
+#X connect 1 0 2 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 6 1 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 1;
+#X connect 17 0 18 0;

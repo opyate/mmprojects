@@ -1,0 +1,50 @@
+#N canvas 300 223 447 471 10;
+#X obj 20 20 cnv 15 400 40 empty empty Ordering_messages 20 17 0 24
+-228856 -66577 0;
+#X text 46 418 look here for the result -->;
+#X text 31 71 Officially \, the execution order in Pd is undefined.
+;
+#X obj 32 220 cnv 15 80 25 empty empty empty 20 12 0 14 -225271 -66577
+0;
+#X obj 186 216 cnv 15 80 25 empty empty empty 20 12 0 14 -225271 -66577
+0;
+#X msg 326 304 now;
+#X msg 263 304 this;
+#X msg 195 305 makes;
+#X msg 136 305 sense;
+#X msg 79 305 !;
+#X obj 186 347 symbol;
+#X msg 203 218 bang;
+#X msg 54 225 bang;
+#X msg 186 371 add2 \$1;
+#X msg 386 303 set;
+#X obj 203 248 trigger bang bang bang bang bang bang;
+#X msg 241 417;
+#X obj 21 93 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 31 98 The [trigger] object allows you to specify the order
+of messages are sent. If you need to make sure that one thing runs
+before another \, use [trigger]:;
+#X text 26 187 click here first;
+#X text 186 196 then click here;
+#X connect 5 0 10 0;
+#X connect 6 0 10 0;
+#X connect 7 0 10 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 15 0;
+#X connect 12 0 7 0;
+#X connect 12 0 9 0;
+#X connect 12 0 14 0;
+#X connect 12 0 8 0;
+#X connect 12 0 5 0;
+#X connect 12 0 6 0;
+#X connect 13 0 16 0;
+#X connect 14 0 16 0;
+#X connect 15 0 9 0;
+#X connect 15 1 8 0;
+#X connect 15 2 7 0;
+#X connect 15 3 6 0;
+#X connect 15 4 5 0;
+#X connect 15 5 14 0;

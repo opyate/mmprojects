@@ -1,0 +1,44 @@
+#N canvas 773 20 803 753 10;
+#X obj 0 0 cnv 15 800 750 empty empty AUDIO_FOLLOWER 20 17 0 22 -203904
+-33289 0;
+#X obj 351 53 cnv 15 400 250 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 351 402 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 361 61 Let's create some noise and a filter;
+#X obj 350 603 cnv 15 400 80 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 351 303 cnv 15 400 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 375 88 1- make an object box \, type: adc~;
+#X text 374 108 2- make an object box \, type: abs~;
+#X text 374 128 3- make an object box \, type: snapshot~;
+#X text 375 150 4- make a number box;
+#X text 375 171 5- make an object box \, type: - 0.002;
+#X text 375 190 6- make an object \, type: line;
+#X text 375 208 7- make an horizontal slider;
+#X text 375 239 8- connect the [adc~] to the [abs~];
+#X text 375 256 9- connect the [abs~] to the [snapshot~];
+#X text 375 319 12- connect the [line] to the [hslider];
+#X text 362 406 Now let's create a switch;
+#X text 371 447 2- make a toggle \, make its color red;
+#X text 371 466 3- make a message box \, type: 1;
+#X text 371 484 4- make a message box \, type: 0;
+#X text 372 503 5- make an object box \, type: metro 50;
+#X text 372 522 6- make another bang;
+#X text 373 557 7- connect everything;
+#X text 374 578 - connect the green toggle to the [1 ( message box
+;
+#X text 374 594 - connect the red toggle to the [0 ( message box;
+#X text 374 613 - connect both message boxes to the hot inlet of the
+[metro];
+#X text 374 632 - connect the [metro] to the third bang;
+#X text 374 652 - connect the bang to the [snapshot~];
+#X text 46 686 Activate the DSP \, click the green bang;
+#X text 47 700 and speak into your mic;
+#X text 49 714 here you go...;
+#X text 375 277 10- connect the number box to the hot inlet of the
+[- 0.002];
+#X text 375 298 11- connect the [- 0.002] to the hot inlet of the [line]
+;
+#X text 371 432 1- make a toggle \, make its color green;

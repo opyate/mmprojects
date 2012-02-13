@@ -1,0 +1,49 @@
+#N canvas 616 133 522 649 10;
+#X obj 144 305 adc~;
+#X obj 167 400 *~;
+#X obj 193 370 osc~;
+#X obj 193 142 vsl 15 128 0.1 10 1 0 empty empty empty 0 -8 0 8 -261681
+-1 -1 0 0;
+#X obj 193 327 osc~;
+#X obj 193 349 *~ 1000;
+#X obj 128 400 *~;
+#X obj 83 142 vsl 15 128 0.1 10 1 0 empty empty empty 0 -8 0 8 -261681
+-1 -1 0 0;
+#X obj 83 370 osc~;
+#X obj 83 327 osc~;
+#X obj 83 349 *~ 1000;
+#X floatatom 89 278 5 0 0 0 - - -;
+#X floatatom 199 277 5 0 0 0 - - -;
+#X obj 167 490 *~;
+#X obj 128 490 *~;
+#X obj 195 439 hsl 128 18 0 4 0 0 empty empty amplitude 5 10 1 14 -225271
+-1 -1 0 0;
+#X obj 323 150 pddp/dsp;
+#X text 231 463 ^-- turn up the volume here;
+#X obj 11 8 cnv 15 400 40 empty empty Ring_modulator 20 17 0 24 -228856
+-66577 0;
+#X obj 11 60 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 29 63 This is a simple ring modulator. It modulates the sound
+coming in on the microphone with two Amplitude Modulators controlled
+by the orange sliders. Turn on the DSP \, turn up the volume \, and
+try messing with your voice.;
+#X obj 114 556 ezdac~;
+#X connect 0 0 6 1;
+#X connect 0 1 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 3 0 12 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 14 0;
+#X connect 7 0 9 0;
+#X connect 7 0 11 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 13 0 21 1;
+#X connect 14 0 21 0;
+#X connect 15 0 13 1;
+#X connect 15 0 14 1;

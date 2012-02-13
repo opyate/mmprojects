@@ -1,0 +1,54 @@
+#N canvas 486 8 803 903 10;
+#X obj -24 -15 cnv 15 800 900 empty empty ALONE_IN_THE_DARK 20 17 0
+22 -203904 -33289 0;
+#X obj 341 3 cnv 15 400 250 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 365 38 1- make an object box \, type: noise~;
+#X obj 345 484 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 351 11 Let's create some noise and a filter;
+#X text 365 514 1- make a toggle [tgl];
+#X obj 344 685 cnv 15 400 150 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 366 701 - connect the toggle to the [metro];
+#X text -2 794 Now click the first toggle and click the DSP toggle
+;
+#X text -2 840 Remember to put up the volume...;
+#X text 364 58 2- make an object box \, type: lop~ 50;
+#X text 364 78 3- make an object box \, type: bp~ 80 3;
+#X text 365 535 2- make an object box \, type: metro 3000;
+#X text 365 555 3- make an object box \, type: drunk 300 100;
+#X text 366 574 4- make a number box;
+#X text 365 594 5- make a message box \, type: \$1 2500;
+#X text 365 615 6- make an object box \, type: line;
+#X text 365 635 7- make a number box;
+#X text 366 719 - connect [metro] to the [drunk];
+#X text 366 737 - connect the [drunk] to the next number box;
+#X text 366 755 - connect the number box to the message box;
+#X text 366 773 - connect the message box to the [line];
+#X text 366 792 - connect the [line] to the number box;
+#X text 365 100 4- make an object box \, type: +~;
+#X text 365 121 5- make an object box \, type: *~ 3;
+#X text -3 811 ...feel the darkness..;
+#X obj 341 273 cnv 15 400 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 363 306 1- make an object box \, type: lop~ 50;
+#X text 363 324 2- make an object box \, type: bp~ 40 6;
+#X text 364 343 3- make an object box \, type: *~ 3;
+#X text 364 382 7- connect the [lop~] to the [bp~];
+#X text 364 680 8- connect everything;
+#X text 356 488 Now let's create a filter automation in eight moves
+;
+#X text 367 810 - connect the number box to the second inlet of [bp~
+40 6];
+#X text 353 281 Let's create another filter beside the previous structure
+;
+#X text 364 362 6- connect the [noise~] to the [lop~];
+#X text 365 140 6- make an object \, type ezdac;
+#X text 365 160 7- connect the [noise~] to the [lop~];
+#X text 365 177 8- connect the [lop~] to the [bp~];
+#X text 363 232 11- connect the [*~] to the [ezdac~];
+#X text 366 195 9- connect the [bp~] to the hot inlet of the [+~];
+#X text 363 213 10- connect the [+~] to the hot inlet of the [*~];
+#X text 365 402 8- connect the [bp~] to the hot inlet of the [*~];
+#X text 366 422 9- connect the [*~] to the cold inlet of the [+~];

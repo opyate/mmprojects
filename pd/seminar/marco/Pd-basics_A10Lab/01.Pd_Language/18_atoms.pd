@@ -1,0 +1,36 @@
+#N canvas 0 0 438 549 10;
+#X obj -2 202 cnv 15 400 70 empty empty empty 20 12 0 14 -262134 -66577
+0;
+#X obj 0 22 cnv 15 400 40 empty empty Atoms 20 17 0 24 -228856 -66577
+0;
+#X text 29 202 1;
+#X text 53 232 0;
+#X text 72 205 1.14234e+034;
+#X text 250 207 3.14159;
+#X text 180 205 -999999;
+#X text 227 235 45;
+#X text 153 234 -12;
+#X text 8 157 A numeric atom is any element that can be interpreted
+as a number:;
+#X text 299 237 1824.53;
+#X text 9 231 3;
+#X text 6 309 A symbolic atom is any element that is not a functional
+representation of a number \, usually in the form of words:;
+#X obj -2 356 cnv 15 400 70 empty empty empty 20 12 0 14 -262134 -66577
+0;
+#X text 6 393 word;
+#X text 41 357 number5;
+#X text 90 395 3..2;
+#X text 292 366 --44;
+#X text 131 360 label;
+#X text 252 400 reset;
+#X text 171 398 5++;
+#X text 202 363 trigger;
+#X text 6 487 A pointer is a very specific type of atom. It is only
+used as a reference to a position in a data structure. There is not
+visualization of a pointer.;
+#X obj 0 70 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 12 69 The basic data types of Pd are called "atoms". An atom
+is a piece of data that cannot be broken down into smaller parts. There
+are three atom types: "float" \, "symbol" \, and "pointer".;

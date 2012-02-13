@@ -1,0 +1,44 @@
+#N canvas 700 88 804 754 10;
+#X obj -24 -15 cnv 15 800 750 empty empty MAKE_SOME_SEAWAVES 20 17
+0 22 -203904 -33289 0;
+#X obj 321 13 cnv 15 400 150 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 344 68 2- make an object box \, type: lop~;
+#X text 344 88 3- make an object box \, type: ezdac~;
+#X text 345 48 1- make an object box \, type: noise~;
+#X obj 321 215 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 331 21 Let's create some noise and a filter;
+#X text 341 245 1- make a toggle [tgl];
+#X text 341 286 3- make another toggle;
+#X text 342 305 4- make an object box \, type: select 0 1;
+#X text 341 325 5- make a message box \, type: 300 4000;
+#X text 341 346 6- make a message box \, type: 1000 3000;
+#X text 341 386 8- make a number box;
+#X obj 320 416 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 341 521 - connect the second outlet of [select] to the second
+message box;
+#X text 343 550 - connect both message boxes to hot inlet of [line]
+;
+#X text 340 444 - connect the toggle to the [metro];
+#X text 339 423 9- connect everything;
+#X text 340 463 - connect [metro] to the second toggle;
+#X text 340 480 - connect the second toggle to [select];
+#X text 343 569 - connect [line] to the number box;
+#X text 341 366 7- make an object box \, type: line;
+#X text 344 108 4- connect the [noise~] to the [lop~];
+#X text 344 127 5- connect the [lop~] to both inlets of the [ezdac~]
+;
+#X text 344 589 - connect the number box to the cold inlet of the [lop~]
+;
+#X text 338 646 Now click the first toggle and click the DSP toggle
+;
+#X text 338 692 Remember to put up the volume...;
+#X text 332 219 Now let's create a filter automation in nine moves
+;
+#X text 332 664 ...wear your sunglasses and enjoy the vibe \, You got
+it!;
+#X text 341 266 2- make an object box \, type: metro 5000;
+#X text 340 496 - connect the first outlet of [select] to the first
+message box;

@@ -1,0 +1,44 @@
+#N canvas 286 169 648 468 10;
+#X declare -lib rradical;
+#X obj 441 50 import rradical;
+#X obj 444 13 pddp/dsp;
+#X obj 11 8 cnv 15 400 40 empty empty Drawing_envelopes 20 17 0 24
+-228856 -66577 0;
+#X obj 117 393 ezdac~;
+#X obj 94 167 osc~ 250;
+#X obj 94 207 *~;
+#X obj 110 188 tgl 15 0 empty empty empty 0 -6 0 8 -225271 -1 -1 0
+1;
+#X obj 25 207 *~;
+#X obj 41 188 tgl 15 1 empty empty empty 0 -6 0 8 -225271 -1 -1 1 1
+;
+#X obj 25 167 noise~;
+#X obj 252 144 envgen 200 140 1 0  ;
+#X obj 250 102 metro 2000;
+#X obj 250 78 tgl 15 0 empty empty empty 0 -6 0 8 -24198 -1 -1 0 1
+;
+#X obj 296 309 print;
+#X obj 249 309 line~;
+#X obj 150 351 *~;
+#X obj 97 143 hsl 128 15 100 1000 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 0 1;
+#X obj 276 123 print -------------;
+#X text 252 347 check Pd window for the output;
+#X text 470 229 <-- click and drag;
+#X text 95 115 move the slider;
+#X text 95 101 activate the toggle;
+#X connect 4 0 5 0;
+#X connect 5 0 15 0;
+#X connect 6 0 5 1;
+#X connect 7 0 15 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 10 0 14 0;
+#X connect 10 0 13 0;
+#X connect 11 0 17 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 1;
+#X connect 15 0 3 1;
+#X connect 15 0 3 0;
+#X connect 16 0 4 0;

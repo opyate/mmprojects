@@ -1,0 +1,19 @@
+#N canvas 0 0 426 331 10;
+#X msg 109 150;
+#X obj 21 150 trigger;
+#X text 54 28 comment;
+#X obj 12 13 cnv 15 400 40 empty empty Getting_Help 20 17 0 24 -228856
+-66577 0;
+#X text 18 187 object;
+#X text 109 187 message;
+#X floatatom 205 150 5 0 0 0 - - -;
+#X text 201 187 number box;
+#X symbolatom 304 150 10 0 0 0 - - -;
+#X text 301 187 symbol box;
+#X text 21 75 Right-click on anything and select "Help" \, and a help
+patch will pop up.;
+#X obj 12 263 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 21 268 You can right-click on the canvas to get a list of the
+core Pd objects. A more complete list is in the Help Browser \, available
+under the Help menu.;

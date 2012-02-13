@@ -1,0 +1,9 @@
+#N canvas 10 40 578 454 10;
+#X declare -lib Gem;
+#X obj 8 10 cnv 15 400 40 empty empty Exercise 20 17 0 24 -228856 -66577
+0;
+#X obj 435 14 gemwin_control;
+#X obj 436 58 import Gem;
+#X text 14 68 EXERCISE:;
+#X text 14 92 Build a patch that allows you to move an object around
+the Gem windows and change its color.;

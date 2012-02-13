@@ -1,0 +1,33 @@
+#N canvas 395 299 427 406 10;
+#X obj 30 145;
+#X obj 28 95 float;
+#X msg 28 191 message;
+#X floatatom 28 240 5 0 0 0 - - -;
+#X symbolatom 28 319 10 0 0 0 - - -;
+#X text 27 368 comment;
+#X text 54 28 comment;
+#X obj 12 13 cnv 15 400 40 empty empty Basic_Elements 20 17 0 24 -228856
+-66577 0;
+#X text 117 367 comment (like the rest of this text);
+#X text 116 251 comment;
+#X text 188 265 - cntrl + click = 0;
+#X text 116 318 symbol box: - click and type;
+#X text 116 235 number box: - click and drag/type;
+#X text 188 249 - shift + drag = float;
+#X text 115 145 empty object box: - click and type;
+#X text 116 191 message box: - click;
+#X text 115 95 example object box;
+#X obj 340 85 cnv 15 20 300 empty empty empty 20 12 0 14 -233017 -262144
+0;
+#X text 365 90 ctrl+1;
+#X text 365 140 ctrl+1;
+#X text 365 190 ctrl+2;
+#X text 367 237 ctrl+3;
+#X text 367 317 ctrl+4;
+#X text 367 366 ctrl+5;
+#X text 367 250 cmd;
+#X text 368 329 cmd;
+#X text 369 376 cmd;
+#X text 366 202 cmd;
+#X text 365 152 cmd;
+#X text 367 101 cmd;

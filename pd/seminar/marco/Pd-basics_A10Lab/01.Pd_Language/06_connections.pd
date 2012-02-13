@@ -1,0 +1,29 @@
+#N canvas 333 287 443 489 10;
+#X floatatom 34 298 5 0 0 0 - - -;
+#X floatatom 34 375 5 0 0 0 - - -;
+#X obj 34 200 tgl 30 0 empty empty start 2 15 1 12 -24198 -1 -1 0 1
+;
+#X obj 34 242 metro 100;
+#X obj 34 269 random 100;
+#X text 80 204 <-- click here to start;
+#X text 68 320 connect by clicking on the outlet of the top number
+box \, then drag and drop on the inlet of the bottom number box;
+#X text 38 320 ^--;
+#X obj 18 20 cnv 15 400 40 empty empty Connections 20 17 0 24 -228856
+-66577 0;
+#X text 72 399 Disconnect the cable by clicking on it to highlight
+it \, then press "backspace" on a PC \, or "delete" on a Mac.;
+#X text 130 240 next \, make sure you are in edit mode!;
+#X text 41 400 ^--;
+#X obj 18 70 cnv 15 400 60 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text 31 75 One path for objects to communicate is thru connections
+\, called cords or cables. Connections are always made from the inlet
+to the outlet since that is the direction data flows in Pd.;
+#X obj 19 145 cnv 15 400 30 empty empty empty 20 17 0 24 -261234 -66577
+0;
+#X text 32 146 Pd patches are always running and changes take effect
+immediately.;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;

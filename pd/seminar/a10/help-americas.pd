@@ -1,0 +1,16 @@
+#N canvas 706 130 450 448 10;
+#X obj 4 6 plusabc;
+#X obj 31 30 cnv 15 400 40 empty empty EXERCISE-help_americans 20 12
+0 24 -262131 -66577 0;
+#X obj 32 83 cnv 15 400 50 empty empty empty 20 17 0 24 -262130 -66577
+0;
+#X text 51 87 Help the poor Americans to understand Celsius. The formula
+is C = (5/9)*(F-32). Try not to use [expr] \, but instead use individual
+Pd objects for each math operation.;
+#X floatatom 128 366 5 0 0 0 Celcius - -;
+#X floatatom 122 170 5 0 0 0 Fahrenheit - -;
+#X obj 186 250 - 32;
+#X obj 186 285 * 0.55;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;

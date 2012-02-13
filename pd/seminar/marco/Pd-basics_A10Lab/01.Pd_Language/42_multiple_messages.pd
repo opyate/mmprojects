@@ -1,0 +1,24 @@
+#N canvas 544 329 431 442 10;
+#X obj -39 16 cnv 15 400 40 empty empty Multiple_messages 20 17 0 24
+-228856 -66577 0;
+#X msg -2 171 1 \, 2 \, 3;
+#X floatatom -1 362 5 0 0 0 - - -;
+#X floatatom 77 362 5 0 0 0 - - -;
+#X floatatom 155 362 5 0 0 0 - - -;
+#X obj -2 205 print;
+#X obj -40 70 cnv 15 400 50 empty empty empty 20 17 0 24 -228856 -66577
+0;
+#X text -30 80 You can send multiple messages in one message box by
+separating them with commas:;
+#X text 54 171 <--;
+#X text 81 154 this is NOT a list \,;
+#X text 176 290 <-- this uses 'selectors';
+#X text 81 182 these print each message on a new line;
+#X text 80 167 because values are separated by commas.;
+#X msg -1 290 first 1 \, second 2 \, third 3;
+#X obj -1 335 route first second third;
+#X connect 1 0 5 0;
+#X connect 13 0 14 0;
+#X connect 14 0 2 0;
+#X connect 14 1 3 0;
+#X connect 14 2 4 0;

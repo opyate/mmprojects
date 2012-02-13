@@ -1,0 +1,17 @@
+#N canvas 465 115 630 445 10;
+#X declare -lib cyclone;
+#X obj 302 30 import cyclone;
+#X obj 442 23 pddp/dsp;
+#X obj 18 20 cnv 15 400 40 empty empty Hello_world 20 17 0 24 -228856
+-66577 0;
+#X text 208 146 2 create an object called: osc~;
+#X text 208 116 1 create a message box with the text: 200;
+#X text 208 176 3 create an object called: dac~;
+#X text 208 206 4 connect the message box to the osc~ object's left
+inlet;
+#X text 208 236 5 connect the osc~ object to both inlets of the dac~
+object;
+#X text 208 266 6 make sure your volume is set very low;
+#X text 208 296 7 turn on DSP by clicking the box on the upper right
+corner;
+#X text 208 326 8 click the message box to hear sound;

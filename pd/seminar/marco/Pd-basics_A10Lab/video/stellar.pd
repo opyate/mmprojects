@@ -1,0 +1,68 @@
+#N canvas 323 6 854 902 10;
+#X obj 0 -110 cnv 15 850 900 empty empty MAKE_SOME_GENERATIVE_OPTICALS
+20 17 0 22 -203904 -33289 0;
+#X obj 423 253 cnv 15 400 200 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 443 275 1- make a toggle [tgl];
+#X text 443 316 3- make another toggle;
+#X text 444 335 4- make an object box \, type: select 0 1;
+#X text 443 416 8- make a number box;
+#X obj 422 454 cnv 15 400 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 442 516 - connect the first outlet of [select] to the first
+message box;
+#X text 443 541 - connect the second outlet of [select] to the second
+message box;
+#X text 445 569 - connect both message boxes to hot inlet of [line]
+;
+#X text 442 464 - connect the toggle to the [metro];
+#X text 441 443 9- connect everything;
+#X text 442 483 - connect [metro] to the second toggle;
+#X text 442 500 - connect the second toggle to [select];
+#X text 445 584 - connect [line] to the number box;
+#X text 443 396 7- make an object box \, type: line;
+#X obj 423 -87 cnv 15 400 120 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 434 -84 Let's create the gem window = pd video output;
+#X text 449 -65 1- make a message box \, type: dimen 640 480;
+#X text 449 -47 2- make a message box \, type: create \, 1;
+#X text 449 -30 3- make a message box \, type: 0 \, destroy;
+#X text 449 -14 4- make an object box \, type: gemwin;
+#X obj 423 43 cnv 15 400 180 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 435 46 Now we create a 3d object;
+#X text 450 128 5- make an object box \, type: tube 0.5 0.9 2.5 30
+;
+#X text 449 3 5- connect all message boxes to [gemwin];
+#X text 449 112 4- make a message box \, type: draw line;
+#X text 450 144 6- connect everything;
+#X text 455 159 - connect [gemhead] to [translateXYZ];
+#X text 456 173 - connect [translateXYZ] to [rotateXYZ];
+#X text 455 188 - connect [rotateXYZ] to [tube];
+#X text 443 296 2- make an object box \, type: metro 3000;
+#X text 443 355 5- make a message box \, type: -2 3000;
+#X text 443 376 6- make a message box \, type: 2 3000;
+#X text 445 598 - connect the number box to the rightmost inlet of
+the [translateXYZ];
+#X text 21 669 finally... click [dimen(;
+#X text 88 684 click [create(;
+#X text 434 257 Now let's create a movement automation;
+#X obj 423 646 cnv 15 400 120 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 433 649 and a bit of rotation;
+#X text 449 668 1- make a toggle;
+#X text 449 686 2- make an object box \, type: metro 50;
+#X text 449 703 3- make an object box \, type: counter 360;
+#X text 451 723 connect toggle to [metro] \, then [metro] to [counter]
+\,;
+#X text 453 738 then [counter] to the rightmost inlet of [rotateXYZ]
+;
+#X text 87 717 click the first toggle;
+#X text 88 733 click the third toggle;
+#X text 88 749 and scrub the videoechoes;
+#X text 242 749 (shift+click and drag);
+#X text 455 203 - connect message box to hot inlet of [tube];
+#X text 86 700 click the [draw line( message;
+#X text 449 62 1- make a object box \, type: gemhead;
+#X text 449 80 2- make a object box \, type: translateXYZ 0 0 0;
+#X text 449 97 3- make a object box \, type: rotateXYZ 0 0 0;
