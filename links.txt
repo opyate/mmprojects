@@ -1,0 +1,46 @@
+AKKA:
+http://github.com/jboner/akka
+http://doc.akkasource.org/tutorial-chat-server
+http://jonasboner.com/2010/01/04/introducing-akka.html
+
+More Akka/AMQP/RabbitMQ:
+http://debasishg.blogspot.com/2008/07/scaling-out-messaging-applications-with.html
+http://blog.getintheloop.eu/2009/5/22/lift-amqp-with-rabbitmq-and-scala-tutorial-and-screencast
+http://blogs.digitar.com/jjww/2009/01/rabbits-and-warrens/
+
+AV
+http://vagueterrain.net/
+http://www.crealab.info/digitalab/?p=393
+http://wiki.puredata.info/en/route
+http://artengine.ca/gridflow/
+http://www.derivative.ca/
+http://vvvv.org/documentation/documentation
+http://developer.apple.com/graphicsimaging/quartz/quartzcomposer.html
+http://www.native-instruments.com/#/en/products/producer/reaktor-5/
+http://www.plogue.com/?page_id=56
+http://www.resolume.com/avenue/
+http://www.vidvox.net/
+http://www.osculator.net/
+http://cycling74.com/products/maxmspjitter/
+http://hexler.net/software/soniclife
+http://puredata.hurleur.com/sujet-2262-gem-pix-film-cpu-100
+http://en.flossmanuals.net/PureData/
+http://processing.org/
+http://cinelerra.org/docs.php
+http://lives.sourceforge.net/
+http://www.apodio.org/
+http://www.rosegardenmusic.com/
+http://ardour.org/
+http://digitalartistshandbook.org/
+http://semiconductorfilms.com/root/soundfilms.htm
+http://beeple-crap.com/resources.php
+http://en.wikipedia.org/wiki/Synesthesia
+http://heartchamberorchestra.org/project.html
+http://www.transmediale.de/en/node/3121
+http://tagr.tv/2010/transmediale-2010-opened
+marco: http://www.thesaddj.com/
+http://marcodonnarumma.com/
+https://gem.iem.at/docs/tutorials/PureDataGEMVideoMixerTutorialVideo
+http://puredata.info/Members/TheSAD/trixtone.zip/view
+http://hangar.org/wikis/lab/doku.php?id=start:puredata_opencv#download_install
+Arboresence http://williambrent.conflations.com/pages/research.html
